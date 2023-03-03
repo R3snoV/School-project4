@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/affaires.png">
+    <link rel="stylesheet" href="file.css" type="text/css">
+   
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Document</title>
+    <style>
+     
+         </style>
+</head>
+<body>
+    <div id="forms">
+        
+        <a href=contact> <button>Contact</button></a>
+        <a href=""> <button>Sign In</button></a>
+       
+     </div>
+    <section>
+        <header id="header1">
+            <div>
+
+                <a href="blackshop">
+                    <h2 style="font-family: cursive;"> BlackShop</h2>
+                </a>
+
+            </div>
+            <div id="nav">
+                <a href="blackshop"> <button>Home</button></a>
+                <a href="cart/products"><button>Shop</button></a>
+                <a href="cart/cart"> <button>Cart</button></a>
+                
+                
+            </div>
+
+
+<div class="menu">
+<div class="menu-icon">&#9776;</div>
+<ul>
+  <li><a href="blackshop">Home</a></li>
+  <li><a href="cart/products">Shop</a></li>
+  <li><a href="cart/cart">Cart</a></li>
+</ul>
+</div>
+<script>
+    const menuIcon = document.querySelector(".menu-icon");
+const navbar = document.querySelector(".menu ul");
+menuIcon.addEventListener("click", () => {
+navbar.classList.toggle("show");
+});
+  </script>
+        </header>
+
+    </section>
+<section class="shopp">
+    <div class="image-container">
+        <img src="image/Mens-Herringbone-Blazer-Brown01-600x764.jpg" alt="Image">
+      </div>
+    <div class="shop-right">
+        <h1>Black Fashion Jacket</h1>
+        <span style="color: #77a464;margin-left:10px ;font-weight: bold;font-size: 25px;">د,م250</span><del><span style="color: #77a464;font-weight: bold;font-size: 25px;">د,م300</span></del>
+        <p>Be ready for any occasion with the Black Fashion Jacket. With its sleek and timeless design, this jacket is perfect for any occasion, from the office to a dressy night out.</p>
+       <a href="cart/products"><button>Buy</button></a>
+        <p style="margin-top: 30px;">Category: <span style="color:rgb(42, 170, 221) ;">Jacket</span>  Tags: <span style="color:rgb(42, 170, 221) ;">Black</span><span style="color:rgb(42, 170, 221) ;"> ,Jacket</span><span style="color:rgb(42, 170, 221) ;"> ,Men</span></p>
+    </div>
+</section>
+
+<div class="description"><h2>Description</h2>
+<p>Add a touch of sleek style to your wardrobe with the 'Black Fashion Jacket'. With its clean and timeless design, this jacket is perfect for any occasion, whether it's a casual look or a dressy night out. Made with top quality materials, this jacket will offer you unparalleled comfort while maintaining a chic and trendy look. Available in men's and women's sizes, the "Black Fashion Jacket" is the perfect addition to your wardrobe this fall and winter.</p>
+</div>
+
+<div class="related"><h2>Related products</h2></div>
+  
+  <section id="section4">
+
+
+    <div class="product">
+      <div>
+          <a href=""> <img  src="image/Mens-Standard-Fit-Sherpa-Fleece-Jacket01-600x764-1-300x300.jpg" alt=""></a>
+          <p>Black Fashion Jacket</p>
+          <span>30.00د,م</span><br>
+          <a href="cart/products"> <button>Buy</button></a>
+          
+      </div>
+      <div>
+          <a href=""> <img src="image/Mens-Standard-Fit-Crew-T-Shirt01-600x764-1-300x300.jpg" alt=""></a>
+          <p>Black Fashion Jacket</p>
+          <span>20.00د,م</span><br>
+          <a href="cart/products"> <button>Buy</button></a>
+         
+      </div>
+      <div>
+          <a href=""> <img src="image/Mens-Standard-Fit-Short-Sleeve-Crew-T-Shirt01-600x764-1-300x300.jpg"
+                  alt=""></a>
+          <p>Black Fashion Jacket</p>
+          <span>20.00د,م</span><br>
+          <a href="cart/products"> <button>Buy</button></a>
+          
+      </div>
+      <div>
+          <a href=""> <img
+                  src="image/Mens-Standard-Fit-Heathered-Short-Sleeve-V-Neck-T-Shirt01-600x764-1-300x300.jpg"
+                  alt=""></a>
+          <p>Black Fashion Jacket</p>
+          <span>20.00د,م</span><br>
+          <a href="cart/products"> <button>Buy</button></a>
+         
+      </div>
+
+
+    
+  </section>
+</div>
+
+<script>
+   
+const loopDuration = 5;
+
+// Get the image element
+const image = document.querySelector('.image-container img');
+
+// Calculate the total number of loop iterations
+const totalIterations = Math.ceil(loopDuration / 0.5);
+
+// Add an event listener for the transition end
+image.addEventListener('transitionend', (event) => {
+ // Get the current iteration number
+ const currentIteration = event.target.dataset.iteration || 1;
+
+ // If the current iteration is the last one, restart the loop
+ if (currentIteration == totalIterations) {
+   event.target.dataset.iteration = 1;
+   event.target.style.transform = 'scale(1)';
+   setTimeout(() => {
+     event.target.style.transform = 'scale(1.2)';
+   }, 10);
+ } else {
+   event.target.dataset.iteration = parseInt(currentIteration) + 1;
+ }
+}); 
+   </script>
+</body>
+</html>
